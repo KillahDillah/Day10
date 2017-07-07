@@ -16,6 +16,7 @@ let numbers = [ 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6 ];
 */
 function getFourthNum(){
     // Your answer here:
+    return numbers[3]
 }
 
 /*
@@ -23,6 +24,12 @@ function getFourthNum(){
 */
 function smallNums(){
     let smallNums = [];
+    for (let i=0; i<numbers.length; i++){
+        if (numbers[i]<10) {
+            smallNums.push(numbers[i])
+        }
+    }
+    return smallNums
     // Your answer here:
 }
 
@@ -30,6 +37,8 @@ function smallNums(){
 3. Add 12, 99, and 101 (in that order) to the end of the "numbers" array. Return the "numbers" array.
 */
 function addNums(){
+    numbers.push(12,99,101);
+    return numbers
     // Your answer here:
 }
 
@@ -53,6 +62,8 @@ let film = {
 4. Add a property "boxoffice" with a value of 269061 to the "film" object. Return "film".
 */
 function addBoxOffice(){
+    film.boxoffice = 269061
+    return film
     // Your answer here:
 }
 
@@ -60,6 +71,8 @@ function addBoxOffice(){
 5. Add the name "Yukiko Shimazaki" to the "actors" array. Return "film";
 */
 function addActor(){
+    film.actors.push ("Yukiko Shimazaki")
+    return film
     // Your answer here:
 }
 
@@ -67,10 +80,10 @@ function addActor(){
 6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
 function getLosses(){
+    let loss = film.boxoffice - film.budget;
+    return loss
     // Your answer here:
 }
-
-
 
 
 
@@ -86,12 +99,12 @@ let letterVals = [ "v", "x", "r", "f", "p" ];
 
 function interleave(){
     let vals = [];
-    // Your answer here:
+
+    for (let i=0; i<letterVals.length; i++) {
+        vals.push (letterVals[i] + numberVals[i])
+    }
+    return vals// Your answer here:
 }
-
-
-
-
 
 
 /*
@@ -103,5 +116,9 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 
 function union(){
     let same = [];
+    for (let i=0; i<second.length; i++) {
+        same.push (second[i] + first[i])
+    }
+    return same
     // Your answer here:
 }
